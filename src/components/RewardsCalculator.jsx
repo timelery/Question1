@@ -1,36 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import './RewardsCalculator.css';
 
-// Mock transaction data for demonstration
+// Mock transaction data
 const mockTransactions = [
-  // Customer 1 - John Doe
-  { id: 1, customerId: 1, customerName: 'John Doe', amount: 120, date: '2024-01-15' },
-  { id: 2, customerId: 1, customerName: 'John Doe', amount: 75, date: '2024-01-22' },
-  { id: 3, customerId: 1, customerName: 'John Doe', amount: 200, date: '2024-02-05' },
-  { id: 4, customerId: 1, customerName: 'John Doe', amount: 45, date: '2024-02-18' },
-  { id: 5, customerId: 1, customerName: 'John Doe', amount: 300, date: '2024-03-10' },
+  { id: 1, customerId: 1, customerName: 'John Doe', amount: 120, date: '2025-05-26' },
+  { id: 2, customerId: 1, customerName: 'John Doe', amount: 75, date: '2025-04-22' },
+  { id: 3, customerId: 1, customerName: 'John Doe', amount: 200, date: '2025-04-21' },
+  { id: 4, customerId: 1, customerName: 'John Doe', amount: 45, date: '2025-03-05' },
+  { id: 5, customerId: 1, customerName: 'John Doe', amount: 300, date: '2025-03-06' },
   
-  // Customer 2 - Jane Smith
-  { id: 6, customerId: 2, customerName: 'Jane Smith', amount: 89, date: '2024-01-08' },
-  { id: 7, customerId: 2, customerName: 'Jane Smith', amount: 156, date: '2024-01-25' },
-  { id: 8, customerId: 2, customerName: 'Jane Smith', amount: 67, date: '2024-02-12' },
-  { id: 9, customerId: 2, customerName: 'Jane Smith', amount: 234, date: '2024-02-28' },
-  { id: 10, customerId: 2, customerName: 'Jane Smith', amount: 98, date: '2024-03-15' },
+  { id: 6, customerId: 2, customerName: 'Jane Smith', amount: 89, date: '2025-01-08' },
+  { id: 7, customerId: 2, customerName: 'Jane Smith', amount: 156, date: '2025-01-25' },
+  { id: 8, customerId: 2, customerName: 'Jane Smith', amount: 67, date: '2025-02-12' },
+  { id: 9, customerId: 2, customerName: 'Jane Smith', amount: 234, date: '2025-02-28' },
+  { id: 10, customerId: 2, customerName: 'Jane Smith', amount: 98, date: '2025-03-15' },
   
-  // Customer 3 - Mike Johnson
-  { id: 11, customerId: 3, customerName: 'Mike Johnson', amount: 35, date: '2024-01-12' },
-  { id: 12, customerId: 3, customerName: 'Mike Johnson', amount: 145, date: '2024-01-20' },
-  { id: 13, customerId: 3, customerName: 'Mike Johnson', amount: 78, date: '2024-02-03' },
-  { id: 14, customerId: 3, customerName: 'Mike Johnson', amount: 189, date: '2024-02-20' },
-  { id: 15, customerId: 3, customerName: 'Mike Johnson', amount: 456, date: '2024-03-05' },
-  { id: 16, customerId: 3, customerName: 'Mike Johnson', amount: 67, date: '2024-03-25' },
+  { id: 11, customerId: 3, customerName: 'Mike Johnson', amount: 35, date: '2025-01-12' },
+  { id: 12, customerId: 3, customerName: 'Mike Johnson', amount: 145, date: '2025-01-20' },
+  { id: 13, customerId: 3, customerName: 'Mike Johnson', amount: 78, date: '2025-02-03' },
+  { id: 14, customerId: 3, customerName: 'Mike Johnson', amount: 189, date: '2025-02-20' },
+  { id: 15, customerId: 3, customerName: 'Mike Johnson', amount: 456, date: '2025-03-05' },
+  { id: 16, customerId: 3, customerName: 'Mike Johnson', amount: 67, date: '2025-03-25' },
   
-  // Customer 4 - Sarah Wilson
-  { id: 17, customerId: 4, customerName: 'Sarah Wilson', amount: 223, date: '2024-01-18' },
-  { id: 18, customerId: 4, customerName: 'Sarah Wilson', amount: 54, date: '2024-02-08' },
-  { id: 19, customerId: 4, customerName: 'Sarah Wilson', amount: 167, date: '2024-02-22' },
-  { id: 20, customerId: 4, customerName: 'Sarah Wilson', amount: 89, date: '2024-03-12' },
-  { id: 21, customerId: 4, customerName: 'Sarah Wilson', amount: 345, date: '2024-03-28' }
+  { id: 17, customerId: 4, customerName: 'Sarah Wilson', amount: 223, date: '2025-01-18' },
+  { id: 18, customerId: 4, customerName: 'Sarah Wilson', amount: 54, date: '2025-02-08' },
+  { id: 19, customerId: 4, customerName: 'Sarah Wilson', amount: 167, date: '2025-02-22' },
+  { id: 20, customerId: 4, customerName: 'Sarah Wilson', amount: 89, date: '2025-03-12' },
+  { id: 21, customerId: 4, customerName: 'Sarah Wilson', amount: 345, date: '2025-03-28' }
 ];
 
 // Simulate API call with delay
@@ -145,7 +141,6 @@ const RewardsCalculator = () => {
           <p className="subtitle">Track reward points earned by customers over three months</p>
         </div>
 
-        {/* Summary Stats */}
         <div className="stats-grid">
           <div className="stat-card blue">
             <div className="stat-content">
@@ -188,7 +183,6 @@ const RewardsCalculator = () => {
           </div>
         </div>
 
-        {/* Customer Grid */}
         <div className="customer-grid">
           {customers.map((customer, index) => (
             <div key={index} className="customer-card">
@@ -235,7 +229,6 @@ const RewardsCalculator = () => {
           ))}
         </div>
 
-        {/* Point Calculation Explanation */}
         <div className="explanation-card">
           <h3 className="explanation-title">Point Calculation Rules</h3>
           <div className="rules-grid">

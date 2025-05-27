@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.1.0",
     "@tailwindcss/cli": "^4.1.7",
     "@tailwindcss/vite": "^4.0.0",
     "@testing-library/dom": "^10.4.0",
